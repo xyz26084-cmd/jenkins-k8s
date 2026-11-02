@@ -17,6 +17,6 @@ spec:
       containers:
         - name: java-container
           image: xyzz84066/java-hello:1.0
-          imagePullPolicy: ifNotPresent
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081
