@@ -12,11 +12,7 @@ pipeline {
                 sh "docker build -t ${env.DOCKER_IMAGE_NAME}:${env.DOCKER_IMAGE_TAG} ." 
             } 
         } 
-        stage('Docker Run') { 
-            steps { 
-                sh "docker run --rm ${env.DOCKER_IMAGE_NAME}" 
-            } 
-        }
+        
 	stage('Push to dockerhub') {
 		steps {
 		  withCredentials([usernamePassword(credentialsId: 'docker-hub-id',
