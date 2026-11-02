@@ -14,7 +14,7 @@ pipeline {
         } 
         stage('Docker Run') { 
             steps { 
-                sh "docker run --rm ${env.DOCKER_IMAGE}" 
+                sh "docker run --rm ${env.DOCKER_IMAGE_NAME}" 
             } 
         }
 	stage('Push to dockerhub') {
